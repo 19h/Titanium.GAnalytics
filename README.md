@@ -3,6 +3,8 @@ Titanium.GAnalytics
 
 Google Analytics for Titanium. Without Copyright-Bullshit, use it wherever you want.
 
+#### Thank you, I'm Kenan Sulayman. :) Feel free to fork, modify and hack.. :=)
+
 ## Getting started
 
 ### 1. Including the plugin into your Titanium project.
@@ -77,6 +79,4 @@ Google Analytics for Titanium. Without Copyright-Bullshit, use it wherever you w
 … which tracks user interaction with a css3-slider.
 
 ### 5. Be creative. Track whenever a user throws your app into the air at runtime.
-### 6. Checkout the realtime dashboard at GAnalytics. Awwwwwsum. <3.
-
 Titanium.GAnalytics
