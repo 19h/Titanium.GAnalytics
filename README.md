@@ -1,7 +1,7 @@
 Titanium.GAnalytics
 ===================
 
-Google Analytics for Titanium. Without Copyright-Bullshit, use it where ever you want.
+Google Analytics for Titanium. Without Copyright-Bullshit, use it wherever you want.
 
 ## -- Getting started --
 
