@@ -3,7 +3,7 @@ Titanium.GAnalytics
 
 Google Analytics for Titanium. Without Copyright-Bullshit, use it wherever you want.
 
-## -- Getting started --
+## Getting started
 
 ### 1. Including the plugin into your Titanium project.
 
@@ -74,9 +74,9 @@ Google Analytics for Titanium. Without Copyright-Bullshit, use it wherever you w
 #### … your fire pageviews from UIWebViews
 
                 Titanium.App.fireEvent("analytics_trackPageview", {p:"/win1/slider1/drag:left"});
-** … which tracks user interaction with a css3-slider.**
+… which tracks user interaction with a css3-slider.
 
-### 5. Be creative. Track however a user throws your app into the air at runtime.
+### 5. Be creative. Track whenever a user throws your app into the air at runtime.
 ### 6. Checkout the realtime dashboard at GAnalytics. Awwwwwsum. <3.
 
-##### Thank you, I'm Kenan Sulayman. :) Feel free to fork, modify and hack like fuck.. :=)
+Titanium.GAnalytics
