@@ -26,7 +26,7 @@
                 return d
         }
 })();
-var GAnalytics = AnalyticsBase.extend({
+var Analytics = AnalyticsBase.extend({
         _PAGEVIEW: "__##PAGEVIEW##__",
         _USER_AGENT: "GoogleAnalytics/1.0 (" + Titanium.Platform.username + "; U; CPU " + Titanium.Platform.name + " " + Titanium.Platform.version + " like Mac OS X; " + Titanium.Platform.locale + "-" + Titanium.Locale.getCurrentCountry() + ")",
         _accountId: void 0,
@@ -45,11 +45,15 @@ var GAnalytics = AnalyticsBase.extend({
         start: function (a) {
                 if (this.enabled) {
                         this._startNewVisit();
-                        this._httpClient = Titanium.Network.createHTTPClient();
+                        this._httpClient = Titanium.Network.createHTTPClient({
+                                onload: function () {
+                                        return Ti.App.disableNetworkActivityIndicator = false;
+                                }
+                        });
                         var b = this;
                         setInterval(function () {
                                 b._dispatchEvents()
-                        }, 1E3 * a)
+                        }, 2E3 * a)
                 }
         },
         stop: function () {
@@ -109,6 +113,8 @@ var GAnalytics = AnalyticsBase.extend({
                                         label: a.fieldByName("label"),
                                         value: a.fieldByName("value")
                                 };
+                                // Introduced with Build 2.2.0.v20120813184911 of Titanium SDK
+                                Ti.App.disableNetworkActivityIndicator = true;
                                 this._httpClient.open("GET", "http://www.google-analytics.com" + this._constructRequestPath(c), !1);
                                 this._httpClient.setRequestHeader("User-Agent", this._USER_AGENT);
                                 this._httpClient.send();
