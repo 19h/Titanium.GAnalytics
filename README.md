@@ -17,14 +17,14 @@ Google Analytics for Titanium. Without Copyright-Bullshit, use it wherever you w
 
 
         Titanium.App.addEventListener('analytics_trackPageview', function (e) {
-        GAnalytics.trackPageview('/iPhone' + e.p);
+        analytics.trackPageview('/iPhone' + e.p);
 
         // Assume every win is a pageview, that is, a page.
 
         });
         
         Titanium.App.addEventListener('analytics_trackEvent', function (e) {
-        GAnalytics.trackEvent(e.category, e.action, e.label, e.value);
+        analytics.trackEvent(e.category, e.action, e.label, e.value);
         });
         
         Titanium.App.Analytics = {
